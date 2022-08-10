@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  background-position: center center;
+  background-size: cover;
+
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+
+  transition: 0.4s;
+}
+
+body:before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slider-container {
+  position: relative;
+
+  height: 70vh;
+  width: 70vw;
+
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: -15vh;
+  left: -15vw;
+  z-index: 1;
+
+  height: 100vh;
+  width: 100vw;
+
+  background-position: center center;
+  background-size: cover;
+
+  opacity: 0;
+  transition: 0.4s ease;
+}
+.slide.active {
+  opacity: 1;
+}
+
+.arrow {
+  position: fixed;
+  top: 50%;
+
+  padding: 15px;
+  width: 70px;
+  height: 80px;
+
+  background-color: transparent;
+  border: 2px solid orange;
+  outline: none;
+
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.arrow svg {
+  fill: #fff;
+}
+
+.left-arrow {
+  left: calc(15vw - 68px);
+}
+.right-arrow {
+  right: calc(15vw - 68px);
+}
