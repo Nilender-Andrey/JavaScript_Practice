@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
+
+:root {
+  --bg-color: #000;
+  --number-buttons-color: #333;
+  --math-action-buttons-color: #ff9501;
+  --action-buttons-color: #a6a6a6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  font-family: 'Heebo', sans-serif;
+}
+
+.calc {
+  width: 300px;
+  height: 500px;
+  padding: 18px;
+
+  border-radius: 20px;
+  background: var(--bg-color);
+  box-shadow: 0px 0px 7px 4px #4f4f4f;
+
+  color: #fff;
+}
+
+.calc-screen {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+
+  height: 125px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.calc-screen p {
+  font-size: 4rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn {
+  width: 60px;
+  height: 60px;
+
+  background-color: var(--number-buttons-color);
+  border-radius: 50%;
+
+  color: inherit;
+  font-size: 1.5rem;
+
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(120%);
+}
+.btn:active {
+  filter: brightness(90%);
+}
+
+.btn.zero {
+  width: 125px;
+  border-radius: 34px;
+}
+
+.btn.action {
+  background: var(--action-buttons-color);
+}
+
+.btn.math-action {
+  background-color: var(--math-action-buttons-color);
+}
