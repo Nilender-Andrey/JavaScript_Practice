@@ -43,10 +43,12 @@ body {
   height: 125px;
   padding: 10px;
   margin-bottom: 20px;
+
+  overflow: hidden;
 }
 
 .calc-screen p {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .buttons {
@@ -82,10 +84,12 @@ body {
   border-radius: 34px;
 }
 
-.btn.action {
+.btn.action,
+.btn.ca {
   background: var(--action-buttons-color);
 }
 
+.btn.result,
 .btn.math-action {
   background-color: var(--math-action-buttons-color);
 }
