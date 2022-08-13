@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  background: steelblue;
+}
+
+.empty {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+
+  border: 3px solid black;
+  background-color: #fff;
+}
+
+.fill {
+  background: url('./asset/img/fill.jpg') center / 90% no-repeat;
+
+  height: 145px;
+  width: 145px;
+
+  cursor: pointer;
+}
+
+.hold {
+  border: 5px solid #ccc;
+}
+
+.hovered {
+  background: #333;
+  border-color: white;
+  border-style: dashed;
+}
+
+@media (max-width: 800px) {
+  body {
+    flex-direction: column;
+  }
+}

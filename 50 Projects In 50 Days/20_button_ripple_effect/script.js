@@ -1,5 +1,3 @@
-/* <span class="circle" style="top: 27px; left:82px"></span> */
-
 const buttons = document.querySelectorAll('.ripple');
 
 buttons.forEach((button) => {
@@ -23,5 +21,3 @@ buttons.forEach((button) => {
     setTimeout(() => circle.remove(), 500);
   });
 });
-
-console.log(buttons);
