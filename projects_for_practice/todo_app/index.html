@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <title>ToDo App</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="header__title">ToDo приложение</h1>
+      <p class="header__text">Список задач на сегодня</p>
+    </div>
+
+    <ul class="todo-list" id="todo-list">
+      <li class="nothing-to-do" id="nothing-to-do">
+        <img class="nothing-to-do__img" src="./img/nothing-to-do.jpg" alt="Радостный кот" />
+        <p class="nothing-to-do__title">Список дел пуст</p>
+      </li>
+    </ul>
+
+    <div class="add-task">
+      <p class="add-task__title">Добавить новую задачу</p>
+      <form class="add-task__form form" name="add-task" id="form">
+        <input class="form__input" name="input-task-name" id="add-task-input" type="text" placeholder="Текст задачи"
+          autocomplete="off" />
+        <button type="submit" class="form__btn">Добавить</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
