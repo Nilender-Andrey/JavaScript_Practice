@@ -40,7 +40,7 @@ li {
 .todo-list {
   padding: 10px 20px;
 
-  background-color: #efefef;
+  background-color: #6d6d6d;
 }
 
 .nothing-to-do {
@@ -71,10 +71,10 @@ li {
 .add-task__title {
   padding: 10px 20px;
 
-  border-bottom: 1px solid #6d6d6d;
-  background: #d1d1d1;
+  background: #6d6d6d;
 
   font-size: 18px;
+  color: #fff;
 }
 
 .form {
@@ -86,9 +86,15 @@ li {
   padding: 10px;
   width: 100%;
 
-  border: 1px solid #6d6d6d;
+  border: none;
+  background-color: #999999;
+  border-radius: 5px;
 
   font-size: 18px;
+}
+
+.form__input::placeholder {
+  color: lightgrey;
 }
 
 .form__btn {
@@ -113,14 +119,19 @@ li {
 .task {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 
-  padding: 5px 20px;
+  padding: 5px 5px 5px 10px;
   margin: 0 0 10px 0;
 
-  border: 1px solid #6d6d6d;
   background-color: #fff;
 
   font-size: 16px;
+}
+
+.task.done > .task__name::after {
+  display: block;
 }
 
 .task:last-child {
@@ -128,7 +139,24 @@ li {
 }
 
 .task__name {
-  flex: 1;
+  position: relative;
+  display: inline-block;
+
+  padding: 0 5px;
+}
+
+.task__name::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  display: none;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: green;
 }
 
 .task__btn {
