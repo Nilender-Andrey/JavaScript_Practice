@@ -1,7 +1,7 @@
 const showPasswordButton = document.querySelector('#show-password-btn');
 const passwordInput = document.querySelector('#password');
 
-const TIME_SHOW_PASSWORD = 2000;
+const TIME_SHOW_PASSWORD = 5000;
 passwordInput.style.animationDuration = TIME_SHOW_PASSWORD + 'ms';
 
 if (showPasswordButton && passwordInput) {
