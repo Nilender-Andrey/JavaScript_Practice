@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+
+  font-size: 18px;
+}
+
+h1 {
+  text-align: center;
+}
+
+input:focus,
+select:focus {
+  background-color: rgb(252, 241, 228);
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  width: auto;
+}
+
+input[type='submit'] {
+  display: block;
+
+  margin-left: auto;
+  max-width: 150px;
+}
+
+.container {
+  width: 480px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
