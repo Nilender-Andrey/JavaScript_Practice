@@ -8,7 +8,8 @@ findButton.addEventListener('click', () => {
   if (text === '') return;
 
   //checkTextTemplateString(text);
-  checkTextRegularExpression(text);
+  //checkTextRegularExpression(text);
+  checkTextCodeSymbol(text);
 });
 
 // Решение 1. Шаблонная строка
@@ -49,10 +50,26 @@ function checkTextTemplateString(text) {
 function checkTextRegularExpression(text) {
   const regexp = /[^\w\s!'"№;%:?*(){}<>\-=\/.,&#@^0]/gi;
 
-  let outputText = text.replace(/\>/g, (str) => '&#x3E;');
-  outputText = outputText.replace(/\</g, (srt) => '&#x3C;');
+  let outputText = text.replace(/\>/g, () => '&#x3E;');
+  outputText = outputText.replace(/\</g, () => '&#x3C;');
   outputText = outputText.replace(regexp, (symbol) => `<mark>${symbol}</mark>`);
 
-  console.log(outputText);
+  outerText.innerHTML = outputText;
+}
+
+// Решение 3. Коды символов
+
+function checkTextCodeSymbol(text) {
+  let outputText = '';
+
+  for (let char of text) {
+    if (char === '>') outputText += '&#x3E;';
+    else if (char === '<') outputText += '&#x3C;';
+    else if (char === '\n') outputText += '<br>';
+    else if (char === '\t') outputText += '&#9;';
+    else if (char.charCodeAt(0) > 126) outputText += `<mark>${char}</mark>`;
+    else outputText += char;
+  }
+
   outerText.innerHTML = outputText;
 }
