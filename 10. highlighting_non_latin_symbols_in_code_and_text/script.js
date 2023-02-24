@@ -4,17 +4,18 @@ const findButton = document.querySelector('.find-btn');
 
 findButton.addEventListener('click', () => {
   const text = innerText.value.trim();
-
+  innerText.value = text;
   if (text === '') return;
 
-  checkTextTemplateString(text);
+  //checkTextTemplateString(text);
+  checkTextRegularExpression(text);
 });
 
 // Решение 1. Шаблонная строка
 
 function checkTextTemplateString(text) {
   const template =
-    'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"№;%:?*()_+-={}[]?.,;:\'"\\/<> ';
+    'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"№;%:?*()_+-={}[].,;:\'"\\/<> ';
 
   let outputText = '';
 
@@ -40,5 +41,18 @@ function checkTextTemplateString(text) {
     }
   }
 
+  outerText.innerHTML = outputText;
+}
+
+// Решение 2. Шаблонная строка
+
+function checkTextRegularExpression(text) {
+  const regexp = /[^\w\s!'"№;%:?*(){}<>\-=\/.,&#@^0]/gi;
+
+  let outputText = text.replace(/\>/g, (str) => '&#x3E;');
+  outputText = outputText.replace(/\</g, (srt) => '&#x3C;');
+  outputText = outputText.replace(regexp, (symbol) => `<mark>${symbol}</mark>`);
+
+  console.log(outputText);
   outerText.innerHTML = outputText;
 }
