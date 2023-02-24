@@ -1,0 +1,16 @@
+.container {
+  display: grid;
+  grid-template-rows: minmax(150px, 1fr) 2rem minmax(150px, 1fr);
+  gap: 20px;
+
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.find-btn {
+  max-width: 7rem;
+}
+
+.text-to-check {
+  resize: vertical;
+}
