@@ -1,4 +1,4 @@
-//* Проверяем равнозначность объектов или массивос
+//* Проверяем равнозначность объектов или массивов
 
 module.exports = function isEqual(a, b) {
   const pull = new Map();
@@ -64,13 +64,5 @@ function getTypeOf(x) {
 }
 
 function isPrimitiveType(x) {
-  return [
-    'Null',
-    'Undefined',
-    'Number',
-    'Boolean',
-    'Symbol',
-    'BigInt',
-    'String',
-  ].includes(x);
+  return ['Null', 'Undefined', 'Number', 'Boolean', 'Symbol', 'BigInt', 'String'].includes(x);
 }
