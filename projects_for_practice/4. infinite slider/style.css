@@ -1,0 +1,51 @@
+html,
+body {
+  background-color: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  /*   box-sizing: border-box; */
+}
+
+.slider {
+  position: relative;
+
+  margin: 2rem auto 0;
+  width: 500px;
+
+  border: 15px solid #fff;
+
+  /* overflow: hidden */
+}
+
+.slider__place img {
+  max-width: 500px;
+  width: 100%;
+
+  object-fit: contain;
+}
+
+.slider__place {
+  position: relative;
+  height: fit-content;
+  display: flex;
+}
+
+.slider__prev-button,
+.slider__next-button {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+
+  border-radius: 50%;
+  border: 1px solid #fff;
+
+  cursor: pointer;
+}
+
+.slider__next-button {
+  right: 0;
+}
