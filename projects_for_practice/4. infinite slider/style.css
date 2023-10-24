@@ -16,9 +16,9 @@ body {
   margin: 2rem auto 0;
   width: 500px;
 
-  border: 15px solid #fff;
+  /* border: 15px solid #fff; */
 
-  /* overflow: hidden */
+  /*   overflow: hidden; */
 }
 
 .slider__place img {
@@ -37,13 +37,37 @@ body {
 .slider__prev-button,
 .slider__next-button {
   position: absolute;
-  top: 50%;
+  bottom: 0px;
   z-index: 1;
 
-  border-radius: 50%;
-  border: 1px solid #fff;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  border: 3px solid gold;
+  background-color: #000;
+
+  font-size: 30px;
+  color: gold;
   cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.slider__prev-button:hover,
+.slider__next-button:hover {
+  border: 3px solid #000;
+  background-color: gold;
+  color: #000;
+}
+
+.slider__prev-button:active,
+.slider__next-button:active {
+  width: 48px;
+  height: 48px;
 }
 
 .slider__next-button {
