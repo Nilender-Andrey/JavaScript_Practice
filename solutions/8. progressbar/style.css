@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+
+  height: 10px;
+  width: 100%;
+  background: orange;
+}
+
+.progress-bar__line {
+
+  height: 10px;
+  width: 0;
+
+  background: orangered;
+}
+
+.container {
+  max-width: 800px;
+  margin: 10px auto 0;
+  padding: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.section {
+  padding: 10px;
+
+
+}
+
+.section>p,
+.section>h4 {
+  margin-bottom: 10px;
+}
+
+.section>h4 {
+  text-transform: uppercase;
+}
